@@ -8,21 +8,22 @@
 </form>
 -->
 
-<%-#= form_for @user do |f| -%>
-  <%-#= f.label :username -%>
-  <%-#= f.text_field :username -%>
-  <%-#= f.label :email -%>
-  <%-#= f.text_field :email -%>
-  <%-#= f.label :password %>
-  <%-#= f.text_field :password -%>
-  <%-#= f.submit "Submit" -%>
-<%-# end -%>
-<%= form_tag users_path, method:'post' do %>
-  <%= label_tag :username, "username" %>
-  <%= text_field_tag :username %>
-  <%= label_tag :email, "email" %>
-  <%= text_field_tag :email %>
-  <%= label_tag :password, "password" %>
-  <%= text_field_tag :password %>
-  <%= submit_tag "Submit" %>
-<% end %>
+<%= form_for @user do |g| %>
+    <%= g.label :username %>
+    <%= g.text_field :username, placeholder: 'Your username here' %>
+    <%= g.label :email %>
+    <%= g.text_field :email, placeholder: 'example@email.com' %>
+    <%= g.label :password %>
+    <%= g.password_field :password %>
+    <%= g.submit "Submit" %>
+  <% end %>
+
+<%#-= form_tag users_path, method:'post' do -%>
+  <%#-= label_tag :username, "username" -%>
+  <%#-= text_field_tag :username -%>
+  <%#-= label_tag :email, "email" -%>
+  <%#-= text_field_tag :email -%>
+  <%#-= label_tag :password, "password" -%>
+  <%#-= text_field_tag :password -%>
+  <%#-= submit_tag "Submit" -%>
+<%#- end -%> 

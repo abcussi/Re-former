@@ -2,21 +2,25 @@
 <form action="/users" method="POST"  accept-charset="UTF-8">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="user_name">Username :</label>
-@@ -8,3 +9,24 @@
+  <input type="text" name="user[username]" id="user_name">
+  <label for="user_email">Email : </label>
+  <input type="email" name="user[email]" id="user_email">
+  <label for="user_password">Password : </label>
   <input type="password" name="user[password]" id="user_password">
   <input type="submit" value="Submit">
 </form>
 -->
 
-<%= form_for @user do |g| %>
-    <%= g.label :username %>
-    <%= g.text_field :username, placeholder: 'Your username here' %>
-    <%= g.label :email %>
-    <%= g.text_field :email, placeholder: 'example@email.com' %>
-    <%= g.label :password %>
-    <%= g.password_field :password %>
-    <%= g.submit "Submit" %>
-  <% end %>
+<%= form_for @user.new do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: 'Your username here' %>
+  <%= f.label :email %>
+  <%= f.text_field :email, placeholder: 'example@email.com' %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.submit "Submit" %>
+<% end %>
+
 
 <%#-= form_tag users_path, method:'post' do -%>
   <%#-= label_tag :username, "username" -%>

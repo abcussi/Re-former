@@ -11,7 +11,7 @@
 </form>
 -->
 
-<%= form_for @user.new do |f| %>
+<%= form_for @user do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username, placeholder: 'Your username here' %>
   <%= f.label :email %>

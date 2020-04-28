@@ -1,6 +1,7 @@
 # Forms
+This project show you the multiple ways to build a form in rails that can send parameters to a controller so that it can build an instance of a model with those parameters.
 
-This a ruby on rails based application that showcases the benefits of Rails framework to generate form elements with some useful helpers like form_tag, form_form, text_field, etc.
+Rails framework to generate form elements with some useful helpers like form_tag, form_form, text_field, etc.
 
 # Requirements
 

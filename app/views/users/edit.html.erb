@@ -1,0 +1,9 @@
+<%= form_for @user do |g| %>
+    <%= g.label :username %>
+    <%= g.text_field :username, placeholder: 'Your username here' %>
+    <%= g.label :email %>
+    <%= g.text_field :email, placeholder: 'example@email.com' %>
+    <%= g.label :password %>
+    <%= g.password_field :password %>
+    <%= g.submit "Submit" %>
+  <% end %>
